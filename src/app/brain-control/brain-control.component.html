@@ -1,0 +1,29 @@
+<section class="brain-control" [ngClass]="{ 'loading': !amplitudes }">
+<!--     <article class="brain-control-channel" *ngFor="let canvas of canvases, let i = index">
+        <aside class="tbrain-control-control">
+            <div class="brain-control-number"
+                [ngStyle]="{ 'background': colors[i].borderColor }">
+                {{ channelNames[i] }}
+            </div>
+        </aside>
+        <canvas class="brain-control-canvas"></canvas>
+        <aside class="brain-control-amplitude"
+            [ngStyle]="{ 'background': colors[i].borderColor }">
+            {{ uVrms[i].toFixed(1) }} uVrms
+        </aside>
+    </article> -->
+    
+    <div class="muse-text-output">
+        <md-list>
+          <md-list-item>TP9: {{tp9Sensor}}</md-list-item>
+          <md-list-item>AF7: {{af7Sensor}}</md-list-item>
+          <md-list-item>AF8: {{af8Sensor}}</md-list-item>
+          <md-list-item>TP10: {{tp10Sensor}}</md-list-item>
+          <!-- <md-list-item>EEG Average: {{eegAvg|async}}</md-list-item> -->
+        </md-list>
+    </div>
+    
+    <div class="graph-settings">
+      <md-checkbox [(ngModel)]="filter">Filter</md-checkbox>
+    </div>
+</section>
